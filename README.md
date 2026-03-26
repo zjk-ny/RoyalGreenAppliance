@@ -3,56 +3,26 @@
   
   <br><br>
 
-  # 🟢 Enterprise IT Operations & Automation Infrastructure
+  # 🟢 RG-Core: Enterprise Routing & Edge Network
   
-  ![Network Status](https://img.shields.io/badge/Network-100%25_Uptime-brightgreen?style=for-the-badge)
-  ![Architecture](https://img.shields.io/badge/Architecture-Cloud_Native-blue?style=for-the-badge)
-  ![Microsoft](https://img.shields.io/badge/Microsoft-Power_Automate-0078D4?style=for-the-badge)
-  ![Security Protocol](https://img.shields.io/badge/Security-Zero_Trust-critical?style=for-the-badge)
-
-  *The centralized digital command center for The Royal Green Appliance Companies, Good Deals Appliances, and Gringer.*
+  ![Telemetry](https://img.shields.io/badge/Telemetry-Active-brightgreen?style=for-the-badge)
+  ![Latency](https://img.shields.io/badge/Latency-12ms-blue?style=for-the-badge)
+  ![Packets](https://img.shields.io/badge/Packet_Loss-0.00%25-success?style=for-the-badge)
+  ![Auth](https://img.shields.io/badge/Auth-OAUTH2_Bearer-critical?style=for-the-badge)
 </div>
 
 ---
 
-## 🏢 Executive Overview
-> **Clearance Level:** `Tier 1 (Public Assets)` | **Maintained By:** `Zach Karel, Chief Technology Officer`
+## 🧬 Microservice Architecture Topology
+> **Active Nodes:** 4 | **Cluster Status:** Synchronized | **Last Ping:** `AUTO-REFRESH`
 
-This repository houses the outward-facing digital infrastructure and edge-network assets powering our multi-state luxury appliance retail operations. It functions as the primary Content Delivery Network (CDN) for automated client communications, HTML email routing, and hybrid e-commerce system integrations.
-
-## ⚙️ Core Technology Stack
-
-| Infrastructure Pillar | Primary Technologies | Deployment Status |
-|-----------------------|----------------------|-------------------|
-| **Process Automation** | Power Automate, SharePoint Lists, Office 365 | `🟢 Active` |
-| **E-Commerce & Retail** | Nationwide, HomeSource, Custom API Webhooks | `🔵 Scaling` |
-| **Network & Hardware** | Ubiquiti, Apple Business Manager (MDM) | `🟢 Active` |
-| **Edge Security** | Cloudflare, Azure Active Directory | `🟢 Active` |
-
-## 🚀 Active Workflow Deployments
-
-<details>
-<summary><b>1. Automated CRM Routing & Fulfillment Handoff</b> <i>(Click to expand)</i></summary>
-
-* **Trigger:** Sales portal `>30 Day Handoff` submission.
-* **Action:** Automated payload extraction, dynamic variable injection, and secure HTML email delivery via delegated Exchange mailboxes.
-* **Impact:** Zero-friction handoff from the sales floor to Fulfillment operations, ensuring structured financial collection (ACH/Wire) prior to delivery.
-</details>
-
-<details>
-<summary><b>2. Dynamic Form Routing & Data Collection</b> <i>(Click to expand)</i></summary>
-
-* **Trigger:** Jotform conditional logic & QR code display interactions.
-* **Action:** Custom CSS wrappers and secure webhook transmissions to internal database tracking boards.
-</details>
-
-## 📁 CDN Directory Architecture
-
-```text
-📦 RG-Enterprise-Infrastructure
- ┣ 📂 assets
- ┃ ┗ 📂 branding         # Cross-brand logos (Royal Green, Good Deals, Gringer)
- ┣ 📂 automations
- ┃ ┗ 📂 templates        # JSON/HTML markup for automated client touchpoints
- ┗ 📂 web
-   ┗ 📂 components       # Custom CSS/JS overrides for internal portal scaling
+```mermaid
+graph TD
+    A[Edge: Sales Portal Form] -->|Encrypted JSON Payload| B(Cloudflare WAF / Routing)
+    B --> C{Azure API Gateway}
+    C -->|Valid Token| D[Power Automate Core Engine]
+    C -->|Null/Invalid| E[Dead Letter Queue / Sink]
+    D --> F[(Shopify Plus Data Lake)]
+    D --> G[Exchange 365 SMTP Relay]
+    G --> H[Client End-Point / Inbox]
+    G --> I[Internal Fulfillment Node]
