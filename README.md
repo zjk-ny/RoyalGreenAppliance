@@ -1,40 +1,58 @@
 <div align="center">
-  <img src="https://d12rh965z7jvqw.cloudfront.net/images/HSECOMMNY-RG/image/catalog/2026-01-27-23-51-44-ny-rg-224b4e0c-fbdb-11f0-8ed2-0eeaf36f30d9.png" width="250" alt="Royal Green Appliance Logo">
+  <img src="https://d12rh965z7jvqw.cloudfront.net/images/HSECOMMNY-RG/image/catalog/2026-01-27-23-51-44-ny-rg-224b4e0c-fbdb-11f0-8ed2-0eeaf36f30d9.png" width="300" alt="The Royal Green Appliance Companies">
   
   <br><br>
 
-  # 🟢 IT Operations & Automation Core
+  # 🟢 Enterprise IT Operations & Automation Infrastructure
   
-  ![System Uptime](https://img.shields.io/badge/System-Online-success?style=for-the-badge)
-  ![CDN Status](https://img.shields.io/badge/CDN-Active-blue?style=for-the-badge)
-  ![Security Protocol](https://img.shields.io/badge/Security-AES_256-critical?style=for-the-badge)
-  ![Deployment](https://img.shields.io/badge/Deployment-Automated-blueviolet?style=for-the-badge)
+  ![Network Status](https://img.shields.io/badge/Network-100%25_Uptime-brightgreen?style=for-the-badge)
+  ![Architecture](https://img.shields.io/badge/Architecture-Cloud_Native-blue?style=for-the-badge)
+  ![Microsoft](https://img.shields.io/badge/Microsoft-Power_Automate-0078D4?style=for-the-badge)
+  ![Security Protocol](https://img.shields.io/badge/Security-Zero_Trust-critical?style=for-the-badge)
 
-  *The central nervous system for digital routing, fulfillment automation, and public asset distribution.*
+  *The centralized digital command center for The Royal Green Appliance Companies, Good Deals Appliances, and Gringer.*
 </div>
 
 ---
 
 ## 🏢 Executive Overview
-> **Access Level:** `Tier 1 (Public Assets)` | **Maintained By:** `Zach Karel, CTO`
+> **Clearance Level:** `Tier 1 (Public Assets)` | **Maintained By:** `Zach Karel, Chief Technology Officer`
 
-This repository contains the outward-facing digital infrastructure powering **The Royal Green Appliance Companies**. It acts as the primary Content Delivery Network (CDN) for email operations and version-controlled storage for our operational workflows.
+This repository houses the outward-facing digital infrastructure and edge-network assets powering our multi-state luxury appliance retail operations. It functions as the primary Content Delivery Network (CDN) for automated client communications, HTML email routing, and hybrid e-commerce system integrations.
 
-## ⚙️ Core Architecture
+## ⚙️ Core Technology Stack
 
-| System | Description | Endpoint Status |
-|--------|-------------|-----------------|
-| **Fulfillment Handoff** | Automated CRM routing for >30 day deliveries. | `🟢 Active` |
-| **Brand CDN** | Low-latency hosting for HTML signatures & logos. | `🟢 Active` |
-| **Webhook Payloads** | Sanitized JSON structures for cross-platform sync. | `🟡 Standby` |
+| Infrastructure Pillar | Primary Technologies | Deployment Status |
+|-----------------------|----------------------|-------------------|
+| **Process Automation** | Power Automate, SharePoint Lists, Office 365 | `🟢 Active` |
+| **E-Commerce & Retail** | Nationwide, HomeSource, Custom API Webhooks | `🔵 Scaling` |
+| **Network & Hardware** | Ubiquiti, Apple Business Manager (MDM) | `🟢 Active` |
+| **Edge Security** | Cloudflare, Azure Active Directory | `🟢 Active` |
 
-## 📁 Directory Structure
+## 🚀 Active Workflow Deployments
+
+<details>
+<summary><b>1. Automated CRM Routing & Fulfillment Handoff</b> <i>(Click to expand)</i></summary>
+
+* **Trigger:** Sales portal `>30 Day Handoff` submission.
+* **Action:** Automated payload extraction, dynamic variable injection, and secure HTML email delivery via delegated Exchange mailboxes.
+* **Impact:** Zero-friction handoff from the sales floor to Fulfillment operations, ensuring structured financial collection (ACH/Wire) prior to delivery.
+</details>
+
+<details>
+<summary><b>2. Dynamic Form Routing & Data Collection</b> <i>(Click to expand)</i></summary>
+
+* **Trigger:** Jotform conditional logic & QR code display interactions.
+* **Action:** Custom CSS wrappers and secure webhook transmissions to internal database tracking boards.
+</details>
+
+## 📁 CDN Directory Architecture
 
 ```text
-📦 RoyalGreenAppliance
+📦 RG-Enterprise-Infrastructure
  ┣ 📂 assets
- ┃ ┗ 📂 branding         # Corporate logos (Good Deals, Gringer, RG Core)
+ ┃ ┗ 📂 branding         # Cross-brand logos (Royal Green, Good Deals, Gringer)
  ┣ 📂 automations
- ┃ ┗ 📂 templates        # JSON/HTML wrappers for client communications
+ ┃ ┗ 📂 templates        # JSON/HTML markup for automated client touchpoints
  ┗ 📂 web
-   ┗ 📂 components       # CSS overrides for internal RG portals
+   ┗ 📂 components       # Custom CSS/JS overrides for internal portal scaling
