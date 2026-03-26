@@ -1,68 +1,56 @@
 <div align="center">
-  <h1 style="color: #00ff00; font-family: monospace;">[ RG-CORE ECHELON MATRIX ]</h1>
-  <h3 style="font-family: monospace; color: #888888;">SYSTEM ARCHITECTURE & TELEMETRY INDEX</h3>
-  <p style="font-family: monospace;"><b>STATUS: SECURE | ROUTING: NOMINAL | ENCRYPTION: AES-256</b></p>
-  <hr>
+  <img src="https://d12rh965z7jvqw.cloudfront.net/images/HSECOMMNY-RG/image/catalog/2026-01-27-23-51-44-ny-rg-224b4e0c-fbdb-11f0-8ed2-0eeaf36f30d9.png" alt="Royal Green Logo" width="350"/>
+  
+  <h2>IT Infrastructure & Automation Core</h2>
+  <p><b>Centralized repository for digital routing, e-commerce middleware, and zero-trust mesh architecture.</b></p>
+  
+  <img src="https://img.shields.io/badge/Power_Automate-Active-0078D4?style=flat-square&logo=powerautomate&logoColor=white" />
+  <img src="https://img.shields.io/badge/Azure_AD-Secured-0052D9?style=flat-square&logo=microsoftazure&logoColor=white" />
+  <img src="https://img.shields.io/badge/Cloudflare-WAF_Enabled-F38020?style=flat-square&logo=cloudflare&logoColor=white" />
+  <img src="https://img.shields.io/badge/Uptime-99.99%25-brightgreen?style=flat-square" />
 </div>
 
-```text
-========================================================================================
-██████╗  ██████╗       ██████╗ ██████╗ ██████╗ ███████╗
-██╔══██╗██╔════╝      ██╔════╝██╔═══██╗██╔══██╗██╔════╝
-██████╔╝██║  ███╗█████╗██║     ██║   ██║██████╔╝█████╗  
-██╔══██╗██║   ██║╚════╝██║     ██║   ██║██╔══██╗██╔══╝  
-██║  ██║╚██████╔╝      ╚██████╗╚██████╔╝██║  ██║███████╗
-╚═╝  ╚═╝ ╚═════╝        ╚═════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝
-[INTEGRITY CHECK] ............................... [PASS]
-[EDGE ROUTING] .................................. [ACTIVE]
-[ACCESS CONTROL] ................................ [STRICT]
-========================================================================================
+<hr>
 
-0x0000  45 00 00 3c 1c 46 40 00 40 06 b1 e6 c0 a8 00 68  E..<.[email protected].@......h
-0x0010  c0 a8 00 01 04 00 00 50 00 00 00 00 00 00 00 00  .......P........
-0x0020  a1 b2 c3 d4 e5 f6 07 18 29 3a 4b 5c 6d 7e 8f 90  [ENCRYPTED_BLOB]
-```
+## 🏗️ System Topology
+
+Our infrastructure operates on a tightly integrated multi-tenant mesh, routing cognitive edge processing directly into our ERP data lakes.
 
 ```mermaid
 graph TD
-    %% Styling Classes
-    classDef secret fill:#000,stroke:#00ff00,stroke-width:2px,color:#00ff00,font-family:monospace
-    classDef secure fill:#0a0a0a,stroke:#888,stroke-width:2px,color:#fff,font-family:monospace
-    classDef neutral fill:#111,stroke:#444,stroke-width:1px,color:#ccc,font-family:monospace
-    classDef data fill:#001a33,stroke:#0088ff,stroke-width:2px,color:#0088ff,font-family:monospace
+    %% Clean, Corporate Styling
+    classDef default fill:#ffffff,stroke:#d1d5db,stroke-width:1px,color:#111827,font-family:sans-serif;
+    classDef edge fill:#f0f9ff,stroke:#0284c7,stroke-width:2px,color:#0369a1,font-family:sans-serif;
+    classDef core fill:#f0fdf4,stroke:#16a34a,stroke-width:2px,color:#15803d,font-family:sans-serif;
+    classDef data fill:#fefce8,stroke:#ca8a04,stroke-width:2px,color:#a16207,font-family:sans-serif;
 
-    subgraph INGRESS_EDGE ["[ INGRESS & COGNITIVE EDGE ]"]
-        DNS["Multi-Zone DNS Fleet"]:::secure
-        WAF["Cloudflare Web Ingress / WAF"]:::secure
-        QR["Dynamic QR Matrix / Jotform API"]:::neutral
-        VOICE["Bland.ai Cognitive Voice Node"]:::secret
+    subgraph INGRESS ["[ Edge Routing & Ingress ]"]
+        DNS["Multi-Zone DNS Fleet"]:::edge
+        WAF["Cloudflare Web Ingress / WAF"]:::edge
+        QR["Dynamic QR Matrix / Jotform"]:::edge
+        VOICE["Cognitive Voice Node"]:::edge
         
         DNS --> WAF
         WAF --> QR
         WAF --> VOICE
     end
 
-    subgraph INTRANET_MESH ["[ INTERNAL INTRANET MESH & AUTOMATION ]"]
-        SP["SharePoint Multi-Portal Mesh"]:::neutral
-        MKT["RG / Good Deals / Marketing"]:::neutral
-        AAD["Azure AD / Security Gateway"]:::secret
-        SPLASH["Splashtop Remote Telemetry"]:::secure
-        PAM["Power Automate Core Engine"]:::secure
-        SMTP["SMTP Relay Sink"]:::neutral
-        FULFILL["Fulfillment Routing Node"]:::neutral
+    subgraph AUTOMATION ["[ Intranet Mesh & Automation ]"]
+        AAD["Azure AD Security Gateway"]:::core
+        PAM["Power Automate Core Engine"]:::core
+        SMTP["SMTP Relay Sink"]:::core
+        FULFILL["Fulfillment Routing Node"]:::core
 
-        SP --> MKT
-        MKT --> AAD
-        AAD --> SPLASH
+        AAD --> PAM
         PAM --> SMTP
         SMTP --> FULFILL
     end
 
-    subgraph ERP_LAKE ["[ CUSTOM MIDDLEWARE & ERP DATA LAKE ]"]
+    subgraph ERP ["[ ERP & Middleware Data Lake ]"]
         ECOMM["Nationwide E-Comm Gateway"]:::data
-        WEBHOOK["Asynchronous Transcript Webhooks"]:::data
-        API["Custom API Bridge (Encrypted)"]:::data
-        POS["HomeSource POS Core"]:::secret
+        WEBHOOK["Asynchronous Webhooks"]:::data
+        API["Custom API Bridge"]:::data
+        POS["HomeSource POS Core"]:::data
 
         ECOMM --> API
         WEBHOOK --> API
@@ -70,7 +58,13 @@ graph TD
     end
 
     %% Cross-Mesh Routing
-    QR -- "Encrypted JSON Payload" --> PAM
+    QR -- "JSON Payload" --> PAM
     VOICE -- "State Sync" --> WEBHOOK
     PAM -- "Zero-Trust Bridge" --> API
 ```
+
+## 📖 Directory Index
+
+* **`/assets`** — Approved branding and static UI components.
+* **`/automations`** — Power Automate workflow templates and JSON configurations.
+* **`/web`** — E-commerce UI components and Jotform portal configurations.
