@@ -3,26 +3,41 @@
   
   <br><br>
 
-  # 🟢 RG-Core: Enterprise Routing & Edge Network
+  # 🟢 RG-Core: Edge Network & Middleware Matrix
   
-  ![Telemetry](https://img.shields.io/badge/Telemetry-Active-brightgreen?style=for-the-badge)
-  ![Latency](https://img.shields.io/badge/Latency-12ms-blue?style=for-the-badge)
-  ![Packets](https://img.shields.io/badge/Packet_Loss-0.00%25-success?style=for-the-badge)
-  ![Auth](https://img.shields.io/badge/Auth-OAUTH2_Bearer-critical?style=for-the-badge)
+  ![Uptime](https://img.shields.io/badge/Uptime-99.99%25-brightgreen?style=for-the-badge)
+  ![AI Routing](https://img.shields.io/badge/AI_Routing-Active-blueviolet?style=for-the-badge)
+  ![Middleware](https://img.shields.io/badge/Middleware-Synchronized-blue?style=for-the-badge)
+  ![Zero Trust](https://img.shields.io/badge/Zero_Trust-Enforced-critical?style=for-the-badge)
+
+  *Centralized command telemetry for multi-tenant intranet operations, AI voice routing, and custom ERP middleware.*
 </div>
 
 ---
 
-## 🧬 Microservice Architecture Topology
-> **Active Nodes:** 4 | **Cluster Status:** Synchronized | **Last Ping:** `AUTO-REFRESH`
+## 🧬 Multi-Tenant Architecture Topology
+> **Clearance:** `Public Read-Only` | **Warning:** Unauthorized probing of these endpoints will trigger automated IP blacklisting.
 
 ```mermaid
 graph TD
-    A[Edge: Sales Portal Form] -->|Encrypted JSON Payload| B(Cloudflare WAF / Routing)
-    B --> C{Azure API Gateway}
-    C -->|Valid Token| D[Power Automate Core Engine]
-    C -->|Null/Invalid| E[Dead Letter Queue / Sink]
-    D --> F[(Shopify Plus Data Lake)]
-    D --> G[Exchange 365 SMTP Relay]
-    G --> H[Client End-Point / Inbox]
-    G --> I[Internal Fulfillment Node]
+    subgraph Ingress & Cognitive Edge
+        DNS[Multi-Zone DNS Fleet] --> WAF(Cloudflare / Web Ingress)
+        WAF --> NLP[Bland.ai Cognitive Voice Node]
+        WAF --> QR[Dynamic QR Matrix / Jotform API]
+    end
+
+    subgraph Custom Middleware & ERP Data Lake
+        API{Nationwide E-Comm Gateway} <-->|Custom API Bridge| POS[(HomeSource POS Core)]
+        NLP -->|Asynchronous Transcript Webhooks| POS
+    end
+
+    subgraph Internal Intranet Mesh & Automation
+        SP[SharePoint Multi-Portal Mesh] -->|RG / Good Deals / Marketing| Auth
+        Auth{Azure AD / Security Gateway} --> Nodes[Splashtop Remote Telemetry]
+        QR -->|Encrypted JSON Payload| PA[Power Automate Core Engine]
+        PA -->|SMTP Relay| Fulfillment[Fulfillment Routing Sink]
+    end
+
+    WAF --> API
+    WAF --> SP
+    PA -.->|State Sync| POS
