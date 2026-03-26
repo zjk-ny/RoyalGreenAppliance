@@ -1,20 +1,19 @@
 <div align="center">
   <img src="https://d12rh965z7jvqw.cloudfront.net/images/HSECOMMNY-RG/image/catalog/2026-01-27-23-51-44-ny-rg-224b4e0c-fbdb-11f0-8ed2-0eeaf36f30d9.png" alt="Royal Green Logo" width="350"/>
   
-  <h2>IT Infrastructure & Automation Core</h2>
-  <p><b>Centralized repository for digital routing, e-commerce middleware, and zero-trust mesh architecture.</b></p>
+  <h2>IT Infrastructure & Automation Overview</h2>
+  <p><b>High-level architectural topology for enterprise digital routing, e-commerce middleware, and zero-trust mesh.</b></p>
   
-  <img src="https://img.shields.io/badge/Power_Automate-Active-0078D4?style=flat-square&logo=powerautomate&logoColor=white" />
-  <img src="https://img.shields.io/badge/Azure_AD-Secured-0052D9?style=flat-square&logo=microsoftazure&logoColor=white" />
-  <img src="https://img.shields.io/badge/Cloudflare-WAF_Enabled-F38020?style=flat-square&logo=cloudflare&logoColor=white" />
-  <img src="https://img.shields.io/badge/Uptime-99.99%25-brightgreen?style=flat-square" />
+  <img src="https://img.shields.io/badge/Status-Online-brightgreen?style=flat-square" />
+  <img src="https://img.shields.io/badge/Architecture-Zero_Trust-0052D9?style=flat-square" />
+  <img src="https://img.shields.io/badge/Edge_Security-WAF_Enabled-F38020?style=flat-square" />
 </div>
 
 <hr>
 
 ## 🏗️ System Topology
 
-Our infrastructure operates on a tightly integrated multi-tenant mesh, routing cognitive edge processing directly into our ERP data lakes.
+This diagram provides a sanitized, high-level overview of our multi-tenant mesh, demonstrating how edge processing securely integrates with our core data lakes.
 
 ```mermaid
 graph TD
@@ -25,32 +24,32 @@ graph TD
     classDef data fill:#fefce8,stroke:#ca8a04,stroke-width:2px,color:#a16207,font-family:sans-serif;
 
     subgraph INGRESS ["[ Edge Routing & Ingress ]"]
-        DNS["Multi-Zone DNS Fleet"]:::edge
-        WAF["Cloudflare Web Ingress / WAF"]:::edge
-        QR["Dynamic QR Matrix / Jotform"]:::edge
-        VOICE["Cognitive Voice Node"]:::edge
+        DNS["Global DNS Routing"]:::edge
+        WAF["Edge Security & WAF"]:::edge
+        FORMS["Dynamic Customer Portals"]:::edge
+        VOICE["Automated Voice Intake"]:::edge
         
         DNS --> WAF
-        WAF --> QR
+        WAF --> FORMS
         WAF --> VOICE
     end
 
     subgraph AUTOMATION ["[ Intranet Mesh & Automation ]"]
-        AAD["Azure AD Security Gateway"]:::core
-        PAM["Power Automate Core Engine"]:::core
-        SMTP["SMTP Relay Sink"]:::core
+        IAM["Enterprise IAM Gateway"]:::core
+        AUTO["Business Logic Automation Engine"]:::core
+        SMTP["Transactional Email Relay"]:::core
         FULFILL["Fulfillment Routing Node"]:::core
 
-        AAD --> PAM
-        PAM --> SMTP
+        IAM --> AUTO
+        AUTO --> SMTP
         SMTP --> FULFILL
     end
 
     subgraph ERP ["[ ERP & Middleware Data Lake ]"]
-        ECOMM["Nationwide E-Comm Gateway"]:::data
+        ECOMM["E-Comm Gateway"]:::data
         WEBHOOK["Asynchronous Webhooks"]:::data
-        API["Custom API Bridge"]:::data
-        POS["HomeSource POS Core"]:::data
+        API["Internal API Bridge"]:::data
+        POS["Central Retail POS Core"]:::data
 
         ECOMM --> API
         WEBHOOK --> API
@@ -58,13 +57,13 @@ graph TD
     end
 
     %% Cross-Mesh Routing
-    QR -- "JSON Payload" --> PAM
+    FORMS -- "Sanitized JSON Payload" --> AUTO
     VOICE -- "State Sync" --> WEBHOOK
-    PAM -- "Zero-Trust Bridge" --> API
+    AUTO -- "Zero-Trust Bridge" --> API
 ```
 
 ## 📖 Directory Index
 
 * **`/assets`** — Approved branding and static UI components.
-* **`/automations`** — Power Automate workflow templates and JSON configurations.
-* **`/web`** — E-commerce UI components and Jotform portal configurations.
+* **`/automations`** — Workflow logic templates and configurations.
+* **`/web`** — E-commerce UI components and portal configurations.
